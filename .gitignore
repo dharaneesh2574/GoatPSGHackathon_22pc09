@@ -1,0 +1,7 @@
+./venv/
+./src/controllers/__pycache__/
+./src/models/__pycache__/
+./src/gui/__pycache__/
+./src/data/__pycache__/
+./src/utils/__pycache__/
+
