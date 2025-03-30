@@ -200,3 +200,149 @@
 2025-03-30 12:48:04,394 - INFO - Lane (8, 12) released by Robot 1
 2025-03-30 12:48:04,395 - INFO - Robot 1 state changed: moving -> task_complete
 2025-03-30 12:48:04,395 - INFO - Robot 1 state changed: moving -> task_complete
+2025-03-30 16:31:18,034 - INFO - Robot 0 created at vertex 2 ()
+2025-03-30 16:31:18,034 - INFO - Robot 0 created at vertex 2 ()
+2025-03-30 16:31:20,066 - INFO - Task assigned to Robot 0: 2 -> 11
+2025-03-30 16:31:20,066 - INFO - Task assigned to Robot 0: 2 -> 11
+2025-03-30 16:31:20,070 - INFO - Path: 2 -> 9 -> 8 -> 12 -> 7 -> 6 -> 11
+2025-03-30 16:31:20,070 - INFO - Path: 2 -> 9 -> 8 -> 12 -> 7 -> 6 -> 11
+2025-03-30 16:31:20,074 - INFO - Lane (2, 9) occupied by Robot 0
+2025-03-30 16:31:20,074 - INFO - Lane (2, 9) occupied by Robot 0
+2025-03-30 16:31:21,330 - INFO - Robot 1 created at vertex 7 (m5)
+2025-03-30 16:31:21,330 - INFO - Robot 1 created at vertex 7 (m5)
+2025-03-30 16:31:21,722 - INFO - Lane (2, 9) released by Robot 0
+2025-03-30 16:31:21,722 - INFO - Lane (2, 9) released by Robot 0
+2025-03-30 16:31:21,728 - INFO - Lane (8, 9) occupied by Robot 0
+2025-03-30 16:31:21,728 - INFO - Lane (8, 9) occupied by Robot 0
+2025-03-30 16:31:22,923 - INFO - Task assigned to Robot 1: 7 -> 13
+2025-03-30 16:31:22,923 - INFO - Task assigned to Robot 1: 7 -> 13
+2025-03-30 16:31:22,927 - INFO - Path: 7 -> 12 -> 8 -> 9 -> 2 -> 13
+2025-03-30 16:31:22,927 - INFO - Path: 7 -> 12 -> 8 -> 9 -> 2 -> 13
+2025-03-30 16:31:22,928 - INFO - Lane (7, 12) occupied by Robot 1
+2025-03-30 16:31:22,928 - INFO - Lane (7, 12) occupied by Robot 1
+2025-03-30 16:31:23,391 - INFO - Lane (8, 9) released by Robot 0
+2025-03-30 16:31:23,391 - INFO - Lane (8, 9) released by Robot 0
+2025-03-30 16:31:23,395 - INFO - Lane (8, 12) occupied by Robot 0
+2025-03-30 16:31:23,395 - INFO - Lane (8, 12) occupied by Robot 0
+2025-03-30 16:31:24,584 - INFO - Lane (7, 12) released by Robot 1
+2025-03-30 16:31:24,584 - INFO - Lane (7, 12) released by Robot 1
+2025-03-30 16:31:24,586 - INFO - Robot 1 state changed: moving -> waiting
+2025-03-30 16:31:24,586 - INFO - Robot 1 state changed: moving -> waiting
+2025-03-30 16:31:25,046 - INFO - Lane (8, 12) released by Robot 0
+2025-03-30 16:31:25,046 - INFO - Lane (8, 12) released by Robot 0
+2025-03-30 16:31:25,066 - INFO - Lane (7, 12) occupied by Robot 0
+2025-03-30 16:31:25,066 - INFO - Lane (7, 12) occupied by Robot 0
+2025-03-30 16:31:25,068 - INFO - Lane (8, 12) occupied by Robot 1
+2025-03-30 16:31:25,068 - INFO - Lane (8, 12) occupied by Robot 1
+2025-03-30 16:31:25,070 - INFO - Robot 1 state changed: waiting -> moving
+2025-03-30 16:31:25,070 - INFO - Robot 1 state changed: waiting -> moving
+2025-03-30 16:31:26,720 - INFO - Lane (7, 12) released by Robot 0
+2025-03-30 16:31:26,720 - INFO - Lane (7, 12) released by Robot 0
+2025-03-30 16:31:26,721 - INFO - Lane (6, 7) occupied by Robot 0
+2025-03-30 16:31:26,721 - INFO - Lane (6, 7) occupied by Robot 0
+2025-03-30 16:31:26,725 - INFO - Lane (8, 12) released by Robot 1
+2025-03-30 16:31:26,725 - INFO - Lane (8, 12) released by Robot 1
+2025-03-30 16:31:26,726 - INFO - Lane (8, 9) occupied by Robot 1
+2025-03-30 16:31:26,726 - INFO - Lane (8, 9) occupied by Robot 1
+2025-03-30 16:31:28,379 - INFO - Lane (6, 7) released by Robot 0
+2025-03-30 16:31:28,379 - INFO - Lane (6, 7) released by Robot 0
+2025-03-30 16:31:28,381 - INFO - Lane (6, 11) occupied by Robot 0
+2025-03-30 16:31:28,381 - INFO - Lane (6, 11) occupied by Robot 0
+2025-03-30 16:31:28,383 - INFO - Lane (8, 9) released by Robot 1
+2025-03-30 16:31:28,383 - INFO - Lane (8, 9) released by Robot 1
+2025-03-30 16:31:28,385 - INFO - Lane (2, 9) occupied by Robot 1
+2025-03-30 16:31:28,385 - INFO - Lane (2, 9) occupied by Robot 1
+2025-03-30 16:31:30,023 - INFO - Lane (6, 11) released by Robot 0
+2025-03-30 16:31:30,023 - INFO - Lane (6, 11) released by Robot 0
+2025-03-30 16:31:30,025 - INFO - Robot 0 state changed: moving -> task_complete
+2025-03-30 16:31:30,025 - INFO - Robot 0 state changed: moving -> task_complete
+2025-03-30 16:31:30,043 - INFO - Lane (2, 9) released by Robot 1
+2025-03-30 16:31:30,043 - INFO - Lane (2, 9) released by Robot 1
+2025-03-30 16:31:30,046 - INFO - Lane (2, 13) occupied by Robot 1
+2025-03-30 16:31:30,046 - INFO - Lane (2, 13) occupied by Robot 1
+2025-03-30 16:31:54,093 - INFO - Robot 0 created at vertex 3 ()
+2025-03-30 16:31:54,093 - INFO - Robot 0 created at vertex 3 ()
+2025-03-30 16:31:56,946 - INFO - Task assigned to Robot 0: 3 -> 10
+2025-03-30 16:31:56,946 - INFO - Task assigned to Robot 0: 3 -> 10
+2025-03-30 16:31:56,950 - INFO - Path: 3 -> 2 -> 1 -> 8 -> 9 -> 10
+2025-03-30 16:31:56,950 - INFO - Path: 3 -> 2 -> 1 -> 8 -> 9 -> 10
+2025-03-30 16:31:56,953 - INFO - Lane (2, 3) occupied by Robot 0
+2025-03-30 16:31:56,953 - INFO - Lane (2, 3) occupied by Robot 0
+2025-03-30 16:31:58,477 - INFO - Robot 1 created at vertex 9 (m2)
+2025-03-30 16:31:58,477 - INFO - Robot 1 created at vertex 9 (m2)
+2025-03-30 16:31:58,594 - INFO - Lane (2, 3) released by Robot 0
+2025-03-30 16:31:58,594 - INFO - Lane (2, 3) released by Robot 0
+2025-03-30 16:31:58,598 - INFO - Lane (1, 2) occupied by Robot 0
+2025-03-30 16:31:58,598 - INFO - Lane (1, 2) occupied by Robot 0
+2025-03-30 16:32:00,251 - INFO - Lane (1, 2) released by Robot 0
+2025-03-30 16:32:00,251 - INFO - Lane (1, 2) released by Robot 0
+2025-03-30 16:32:00,253 - INFO - Lane (1, 8) occupied by Robot 0
+2025-03-30 16:32:00,253 - INFO - Lane (1, 8) occupied by Robot 0
+2025-03-30 16:32:00,434 - INFO - Task assigned to Robot 1: 9 -> 2
+2025-03-30 16:32:00,434 - INFO - Task assigned to Robot 1: 9 -> 2
+2025-03-30 16:32:00,438 - INFO - Path: 9 -> 8 -> 1 -> 2
+2025-03-30 16:32:00,438 - INFO - Path: 9 -> 8 -> 1 -> 2
+2025-03-30 16:32:00,440 - INFO - Lane (8, 9) occupied by Robot 1
+2025-03-30 16:32:00,440 - INFO - Lane (8, 9) occupied by Robot 1
+2025-03-30 16:32:01,918 - INFO - Lane (1, 8) released by Robot 0
+2025-03-30 16:32:01,918 - INFO - Lane (1, 8) released by Robot 0
+2025-03-30 16:32:01,927 - INFO - Robot 0 state changed: moving -> waiting
+2025-03-30 16:32:01,927 - INFO - Robot 0 state changed: moving -> waiting
+2025-03-30 16:32:02,101 - INFO - Lane (8, 9) released by Robot 1
+2025-03-30 16:32:02,101 - INFO - Lane (8, 9) released by Robot 1
+2025-03-30 16:32:02,103 - INFO - Lane (1, 8) occupied by Robot 1
+2025-03-30 16:32:02,103 - INFO - Lane (1, 8) occupied by Robot 1
+2025-03-30 16:32:02,119 - INFO - Lane (8, 9) occupied by Robot 0
+2025-03-30 16:32:02,119 - INFO - Lane (8, 9) occupied by Robot 0
+2025-03-30 16:32:02,121 - INFO - Robot 0 state changed: waiting -> moving
+2025-03-30 16:32:02,121 - INFO - Robot 0 state changed: waiting -> moving
+2025-03-30 16:32:03,768 - INFO - Lane (1, 8) released by Robot 1
+2025-03-30 16:32:03,768 - INFO - Lane (1, 8) released by Robot 1
+2025-03-30 16:32:03,790 - INFO - Lane (1, 2) occupied by Robot 1
+2025-03-30 16:32:03,790 - INFO - Lane (1, 2) occupied by Robot 1
+2025-03-30 16:32:03,795 - INFO - Lane (8, 9) released by Robot 0
+2025-03-30 16:32:03,795 - INFO - Lane (8, 9) released by Robot 0
+2025-03-30 16:32:03,797 - INFO - Lane (9, 10) occupied by Robot 0
+2025-03-30 16:32:03,797 - INFO - Lane (9, 10) occupied by Robot 0
+2025-03-30 16:32:05,425 - INFO - Lane (1, 2) released by Robot 1
+2025-03-30 16:32:05,425 - INFO - Lane (1, 2) released by Robot 1
+2025-03-30 16:32:05,427 - INFO - Robot 1 state changed: moving -> task_complete
+2025-03-30 16:32:05,427 - INFO - Robot 1 state changed: moving -> task_complete
+2025-03-30 16:32:05,443 - INFO - Lane (9, 10) released by Robot 0
+2025-03-30 16:32:05,443 - INFO - Lane (9, 10) released by Robot 0
+2025-03-30 16:32:05,446 - INFO - Robot 0 state changed: moving -> task_complete
+2025-03-30 16:32:05,446 - INFO - Robot 0 state changed: moving -> task_complete
+2025-03-30 16:32:08,189 - INFO - Task assigned to Robot 1: 2 -> 9
+2025-03-30 16:32:08,189 - INFO - Task assigned to Robot 1: 2 -> 9
+2025-03-30 16:32:08,192 - INFO - Path: 2 -> 1 -> 8 -> 9
+2025-03-30 16:32:08,192 - INFO - Path: 2 -> 1 -> 8 -> 9
+2025-03-30 16:32:08,193 - INFO - Lane (1, 2) occupied by Robot 1
+2025-03-30 16:32:08,193 - INFO - Lane (1, 2) occupied by Robot 1
+2025-03-30 16:32:09,218 - INFO - Robot 2 created at vertex 8 ()
+2025-03-30 16:32:09,218 - INFO - Robot 2 created at vertex 8 ()
+2025-03-30 16:32:09,845 - INFO - Lane (1, 2) released by Robot 1
+2025-03-30 16:32:09,845 - INFO - Lane (1, 2) released by Robot 1
+2025-03-30 16:32:09,847 - INFO - Lane (1, 8) occupied by Robot 1
+2025-03-30 16:32:09,847 - INFO - Lane (1, 8) occupied by Robot 1
+2025-03-30 16:32:10,441 - INFO - Task assigned to Robot 2: 8 -> 9
+2025-03-30 16:32:10,441 - INFO - Task assigned to Robot 2: 8 -> 9
+2025-03-30 16:32:10,445 - INFO - Path: 8 -> 9
+2025-03-30 16:32:10,445 - INFO - Path: 8 -> 9
+2025-03-30 16:32:10,447 - INFO - Lane (8, 9) occupied by Robot 2
+2025-03-30 16:32:10,447 - INFO - Lane (8, 9) occupied by Robot 2
+2025-03-30 16:32:11,501 - INFO - Lane (1, 8) released by Robot 1
+2025-03-30 16:32:11,501 - INFO - Lane (1, 8) released by Robot 1
+2025-03-30 16:32:11,504 - INFO - Robot 1 state changed: moving -> waiting
+2025-03-30 16:32:11,504 - INFO - Robot 1 state changed: moving -> waiting
+2025-03-30 16:32:12,084 - INFO - Lane (8, 9) released by Robot 2
+2025-03-30 16:32:12,084 - INFO - Lane (8, 9) released by Robot 2
+2025-03-30 16:32:12,085 - INFO - Robot 2 state changed: moving -> task_complete
+2025-03-30 16:32:12,085 - INFO - Robot 2 state changed: moving -> task_complete
+2025-03-30 16:32:12,100 - INFO - Lane (8, 9) occupied by Robot 1
+2025-03-30 16:32:12,100 - INFO - Lane (8, 9) occupied by Robot 1
+2025-03-30 16:32:12,102 - INFO - Robot 1 state changed: waiting -> moving
+2025-03-30 16:32:12,102 - INFO - Robot 1 state changed: waiting -> moving
+2025-03-30 16:32:13,745 - INFO - Lane (8, 9) released by Robot 1
+2025-03-30 16:32:13,745 - INFO - Lane (8, 9) released by Robot 1
+2025-03-30 16:32:13,747 - INFO - Robot 1 state changed: moving -> task_complete
+2025-03-30 16:32:13,747 - INFO - Robot 1 state changed: moving -> task_complete

@@ -1,105 +1,51 @@
 # Fleet Management System
 
-A visually intuitive and interactive Fleet Management System using Python Pygame, capable of managing multiple robots simultaneously navigating through an environment. The system features real-time visualization, collision avoidance, and dynamic task assignment.
+## Description
+The Fleet Management System is a simulation application designed to manage and monitor a fleet of robots navigating through a defined environment. The system allows for the creation of robots, task assignment, and real-time visualization of robot movements and lane occupancy.
 
 ## Features
-
-1. **Visual Representation**
-   - Environment visualization with vertices and lanes
-   - Interactive vertex display with names and intersections
-   - Real-time robot visualization with status indicators
-   - Occupied lane highlighting
-
-2. **Robot Management**
-   - Dynamic robot spawning at vertices
-   - Unique robot identification and color coding
-   - Real-time status visualization (moving, waiting, charging, task complete)
-
-3. **Task Assignment**
-   - Interactive task assignment through GUI
-   - Visual path planning and execution
-   - Real-time task status updates
-
-4. **Traffic Management**
-   - Collision avoidance system
-   - Lane occupancy tracking
-   - Queue management for shared resources
+- Create and manage multiple robots.
+- Assign tasks to robots and visualize their paths.
+- Real-time updates on robot states and lane occupancy.
+- Customizable navigation graph for different environments.
 
 ## Installation
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd fleet-management-robots
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/dharaneesh2574/GoatPSGHackathon_22pc09
+   cd fleet-management-robots
+   ```
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+2. **Install dependencies**:
+   Make sure you have Python 3.x installed. You may need to install the required packages. You can do this using pip:
+   ```bash
+   pip install pygame
+   ```
 
-## Usage
+3. **Prepare the data**:
+   Place your navigation graph JSON files in the `data` directory. The application is designed to work with any dataset that follows the expected structure.
 
-Run the application:
-```bash
-python src/main.py
-```
+## Running the Application
 
-### GUI Controls
+1. **Update the dataset**:
+   To use a different dataset, update the path to your JSON file in `main.py`:
+   ```python
+   nav_graph_path = os.path.join(project_root, 'data', 'nav_graph_1.json') 
+   ```
+   you can also use nav_graph_2.json or nav_graph_3.json
 
-- **Left Click on Vertex**: 
-  - If no robot is selected: Creates a new robot at the clicked vertex
-  - If a robot is selected: Assigns the clicked vertex as the destination
+2. **Run the application**:
+   Execute the following command in your terminal:
+   ```bash
+   python src/main.py
+   ```
 
-- **Left Click on Robot**: Selects the robot for task assignment
+3. **Interact with the GUI**:
+   - Left Click on a vertex to create a robot.
+   - Left Click on a robot to select it.
+   - Left Click on a vertex while a robot is selected to assign a task.
+   - Right Click to deselect a robot.
+   - Press 'H' for help and to see the controls.
 
-- **Right Click**: Cancels the current robot selection
 
-### Visual Indicators
-
-- **Robots**: 
-  - Colored circles with unique IDs
-  - Status ring color indicates current state:
-    - White: Idle
-    - Green: Moving
-    - Red: Waiting
-    - Cyan: Charging
-    - Yellow: Task Complete
-
-- **Vertices**:
-  - White circles with names
-  - Green ring indicates charging station
-
-- **Lanes**:
-  - Gray: Available
-  - Red: Occupied
-
-## Project Structure
-
-```
-fleet_management_system/
-├── data/
-│   └── nav_graph.json
-├── src/
-│   ├── models/
-│   │   ├── nav_graph.py
-│   │   └── robot.py
-│   ├── controllers/
-│   │   ├── fleet_manager.py
-│   │   └── traffic_manager.py
-│   ├── gui/
-│   │   └── fleet_gui.py
-│   └── main.py
-├── requirements.txt
-└── README.md
-```
-
-## Dependencies
-
-- Python 3.7+
-- Pygame 2.5.2
-- NumPy 1.24.3
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
