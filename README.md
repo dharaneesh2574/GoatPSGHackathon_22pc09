@@ -14,7 +14,7 @@ The Fleet Management System is a simulation application designed to manage and m
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/dharaneesh2574/GoatPSGHackathon_22pc09
-   cd fleet-management-robots
+   cd GoatPSGHackathon_22pc09
    ```
 
 2. **Install dependencies**:
