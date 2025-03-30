@@ -11,7 +11,7 @@ from src.gui.fleet_gui import FleetGUI
 
 def main():
     # Get the absolute path to the nav_graph.json file
-    nav_graph_path = os.path.join(project_root, 'data', 'nav_graph_3.json')
+    nav_graph_path = os.path.join(project_root, 'data', 'nav_graph_1.json')
     
     # Initialize components
     nav_graph = NavGraph(nav_graph_path)

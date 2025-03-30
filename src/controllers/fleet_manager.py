@@ -1,22 +1,3 @@
-"""
-Fleet Manager Module
-
-This module manages a group of robots working together.
-Think of it like a command center that:
-- Creates and manages robots
-- Assigns tasks to robots
-- Coordinates robot movements
-- Handles robot charging
-- Manages traffic between robots
-
-The fleet manager works by:
-1. Creating robots when needed
-2. Assigning tasks to available robots
-3. Making sure robots don't crash into each other
-4. Keeping track of robot states and positions
-5. Logging all important events
-"""
-
 from typing import List, Dict, Optional, Tuple
 import random
 from src.models.robot import Robot, RobotState
@@ -25,28 +6,13 @@ from src.controllers.traffic_manager import TrafficManager
 from src.utils.logger import FleetLogger
 
 class FleetManager:
-    """
-    Manages a group of robots working together.
-    Think of it like a command center that:
-    - Creates and manages robots
-    - Assigns tasks to robots
-    - Coordinates robot movements
-    - Handles robot charging
-    - Manages traffic between robots
-    """
-    
-    def __init__(self, nav_graph: NavGraph, logger: FleetLogger):
-        """
-        Create a new fleet manager.
-        - nav_graph: The map robots will move on
-        - logger: System for recording fleet events
-        """
+    def __init__(self, nav_graph: NavGraph):
         self.nav_graph = nav_graph
-        self.traffic_manager = TrafficManager(nav_graph, logger)
-        self.logger = logger
+        self.traffic_manager = TrafficManager()
         self.robots: Dict[int, Robot] = {}
         self.next_robot_id = 0
         self.selected_robot: Optional[Robot] = None
+        self.logger = FleetLogger()
         
         # Generate distinct colors for robots
         self.robot_colors = self._generate_robot_colors()
@@ -83,17 +49,7 @@ class FleetManager:
         return colors
         
     def create_robot(self, start_vertex: int) -> Robot:
-        """
-        Create a new robot at a specific point.
-        - start_vertex: The point where the robot should start
-        
-        Returns the newly created robot.
-        The robot will:
-        1. Get a unique ID
-        2. Start at the specified point
-        3. Be ready to receive tasks
-        4. Be logged in the system
-        """
+        """Create a new robot at the specified vertex."""
         if start_vertex not in range(len(self.nav_graph.vertices)):
             error_msg = f"Invalid vertex index: {start_vertex}"
             self.logger.log_error(error_msg)
@@ -114,45 +70,19 @@ class FleetManager:
         return robot
         
     def select_robot(self, robot_id: int) -> bool:
-        """
-        Select a robot to give it a task.
-        - robot_id: The ID of the robot to select
-        
-        This method:
-        1. Finds the robot by ID
-        2. Makes it the selected robot
-        3. Logs the selection
-        """
+        """Select a robot by ID. Returns True if successful."""
         if robot_id in self.robots:
             self.selected_robot = self.robots[robot_id]
-            self.logger.log_robot_selection(robot_id)
             return True
         return False
         
     def deselect_robot(self):
-        """
-        Stop having a robot selected.
-        This method:
-        1. Clears the selected robot
-        2. Logs the deselection
-        """
-        if self.selected_robot:
-            self.logger.log_robot_deselection(self.selected_robot.robot_id)
-            self.selected_robot = None
+        """Deselect the currently selected robot."""
+        self.selected_robot = None
         
     def assign_task(self, target_vertex: int) -> bool:
-        """
-        Give a task to the selected robot.
-        - target_vertex: The point the robot should move to
-        
-        Returns True if the task was assigned successfully.
-        The robot will:
-        1. Find the shortest path to the target
-        2. Start moving along that path
-        3. Update its state to MOVING
-        4. Log the task assignment
-        """
-        if not self.selected_robot or self.selected_robot.state != RobotState.IDLE:
+        """Assign a task to the selected robot. Returns True if successful."""
+        if not self.selected_robot:
             return False
             
         if target_vertex not in range(len(self.nav_graph.vertices)):
@@ -181,16 +111,7 @@ class FleetManager:
         return True
         
     def update(self, dt: float):
-        """
-        Update all robots' states over time.
-        - dt: Time passed since last update
-        
-        This method:
-        1. Updates each robot's position and state
-        2. Handles robot charging
-        3. Manages traffic between robots
-        4. Logs important state changes
-        """
+        """Update all robots and traffic management."""
         for robot in self.robots.values():
             old_state = robot.state
             
@@ -217,19 +138,14 @@ class FleetManager:
                     self.logger.log_task_completed(robot.robot_id, robot.target_vertex)
                     
             # Update traffic management
-            self.traffic_manager.update_robot_state(robot, self.nav_graph)
+            self.traffic_manager.update_robot_state(robot, self.nav_graph, dt)
             
             # Log state changes
             if robot.state != old_state:
                 self.logger.log_robot_state_change(robot.robot_id, old_state.value, robot.state.value)
             
     def get_robot_at_position(self, pos: Tuple[float, float], radius: float = 0.5) -> Optional[Robot]:
-        """
-        Find a robot at a specific position.
-        - pos: The x, y coordinates to check
-        
-        Returns the robot at that position, or None if no robot is there.
-        """
+        """Find a robot at the given position within the specified radius."""
         for robot in self.robots.values():
             robot_pos = robot.get_position(self.nav_graph)
             dx = robot_pos[0] - pos[0]
@@ -239,12 +155,7 @@ class FleetManager:
         return None
         
     def get_vertex_at_position(self, pos: Tuple[float, float], radius: float = 0.5) -> Optional[int]:
-        """
-        Find a point near a specific position.
-        - pos: The x, y coordinates to check
-        
-        Returns the index of the nearest point, or None if no point is nearby.
-        """
+        """Find a vertex at the given position within the specified radius."""
         for vertex_id, vertex_pos in self.nav_graph.vertex_positions.items():
             dx = vertex_pos[0] - pos[0]
             dy = vertex_pos[1] - pos[1]
