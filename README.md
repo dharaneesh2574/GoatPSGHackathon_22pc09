@@ -48,4 +48,22 @@ The Fleet Management System is a simulation application designed to manage and m
    - Right Click to deselect a robot.
    - Press 'H' for help and to see the controls.
 
+   ## Images
+  
+**nav_graph_2.json**
+![Screenshot 2025-03-30 181239](https://github.com/user-attachments/assets/39179a08-2a77-43cb-9483-e055966e0c94)
+
+**nav_graph_1.json**
+![image](https://github.com/user-attachments/assets/bffe9902-f06a-4085-a1ed-9b34f22f341b)
+
+**nav_graph_3.json**
+![image](https://github.com/user-attachments/assets/785bd971-44fe-4bca-986a-7c71d0b19b9d)
+
+
+
+
+
+
+
+
 
